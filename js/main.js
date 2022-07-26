@@ -14,10 +14,10 @@ const deleteProf=(profesor)=>{
    let index = profesor.indexOf(profesor);
 
    if(index!=-1){
-      profesor.splice(index,1);
+      profesor.slice(index,1);
    }
 }
-deleteProf("Jorge"); 
+  console.log;
 
 // Objetos
 
