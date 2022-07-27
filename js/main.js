@@ -6,9 +6,6 @@ let parcial2 = [];
 let profesor=["Jorge","Juan","Pedro","Maria","Jose"];
 
 
-
-
-
 //eliminar algun profesor
 const deleteProf=(profesor)=>{
    let index = profesor.indexOf(profesor);
@@ -55,11 +52,6 @@ class estudiante {
       } 
    }
 }
-
-const estudiante1 = new estudiante("Juan", 20, 5, 10, 10);
-const estudiante2 = new estudiante("Pedro", 21, 6, 9, 9);
-const estudiante3 = new estudiante("Juan", 20, 5, 10, 10);
-
 
 
 
@@ -142,3 +134,43 @@ function verEstadisticas() {
 
 ingresoDatos();
 verEstadisticas()
+
+
+//Ventas de cursos de la universidad 
+// quiero añadir un parte de ventas de cursos para poder tener un poco mas de juego con el codigo
+
+const iva= 0.21;
+
+
+class alumnos {
+   constructor(nombre, curso, precio) {
+      this.nombre = nombre.toUpperCase();
+      this.curso = curso.toUpperCase();
+      this.precio = parseInt(precio);
+   }
+
+   iva() {
+      return this.precio * iva;
+
+   }
+  
+}
+
+const cursos =[
+   {id:1,  producto: "JavaScript",precio:10000},
+   {id:2,  producto: "HTML",precio:20000},
+   {id:3,  producto: "CSS",precio:30000},
+   {id:4,  producto: "PHP",precio:40000},
+   {id:5,  producto: "Python",precio:50000},
+   {id:6,  producto: "C#",precio:90000},
+   {id:7,  producto: "C++",precio:70000},
+]
+
+const listaProductos = cursos.map(function(e){
+return `[${e.producto};${e.precio};${e.id}]`;
+})
+
+document.write(listaProductos)
+
+const cardCursos = document.getElementsByClassName("card") 
+cardCursos.innerHTML = `lista de productos: ${listaProductos}`;	
