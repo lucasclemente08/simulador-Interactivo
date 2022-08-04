@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador Interactivo</title>
     
-    <link rel="stylesheet" href="./css/styles.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="./css/styles.css"></head>
 <body>
 
   <div class="container">
@@ -17,15 +17,52 @@
         <li class="nav-item"><a href="../index.html" class="nav-link active" aria-current="page">Inicio</a></li>
         <li class="nav-item"><a href="./pages/alumnos.html" class="nav-link">Alumnos</a></li>
         <li class="nav-item"><a href="./pages/cursos.html" class="nav-link">Cursos</a></li>
+        <div>
+        <li class="nav-item"><a href="./pages/cart.html"  class="nav-link btn-cart"><img src="../images/cart.svg"  height="30px"  alt=""></a></li>
+      </div>
       </ul>
+      <div class="text-end">
+        <button type="button" class="btn btn-outline-dark me-2">Login</button>
+        <button type="button" class="btn btn-primary"><a href=".">Sign-up</a>  </button>
+      </div>
     </header>
-
+    <div class="container justify-content-center col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="./images/educator.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Elegí tu futuro!</h1>
+          <p class="lead">Elegi entre los mejores cursos de desarrollo y convertite en un software developer. <strong> Tenemos descuentos del 30% en la compra de la carrera de Front-End Developer </strong></p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-dark btn-lg px-4 me-md-2 btn-cursos"><a href="./pages/cursos.html">Cursos</a> </button>
+            <button type="button" class="btn btn-outline-secondary btn-lg  btn-alumnos px-4"><a href="./pages/alumnos.html">Alumnos</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
          
         <main>
           <p></p>
         </main>
       </div>
-
+     
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2022 - Simulador Interactivo</p>
+          </div>
+          <div class="col-md-6  links text-md-right">
+            <a href="#" class=" links">Acerca de</a>
+            <a href="#" class=" links">Contacto</a>
+            <a href="#" class=" links">Terminos y condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>

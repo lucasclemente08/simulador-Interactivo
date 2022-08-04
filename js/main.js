@@ -4,6 +4,7 @@ let materias = [];
 let parcial1 = [];
 let parcial2 = [];
 let profesor=["Jorge","Juan","Pedro","Maria","Jose"];
+let i = 0;
 
 
 //eliminar algun profesor
@@ -60,25 +61,26 @@ class estudiante {
 
 function ingresoDatos() {
 
+     const nom = document.getElementById("nombre");
+       const ed = document.getElementById("edad");
+       const mat = document.getElementById("materias");
+       const p1 = document.getElementById("parcial1");
+      const p2 = document.getElementById("parcial2");
 
 
+      edad[i] = ed.value;
+      nombre[i]= nom.value;
+      materias[i] = parseInt(mat.value);
+      parcial1[i]= parseInt(p1.value); 
+     parcial2[i]=  parseInt(p2.value);
+      i++;
+       
+      ed.value="";
+      nom.value="";
+      mat.value="";
+      p1.value="";
+      p2.value="";
 
-
-   for (let i = 0; i < 2; i++) {
-
-      ed = prompt("Ingrese su edad");
-      nom = prompt("Ingrese su nombre");
-      mat = prompt("Ingrese el numero de materias que cursa")
-      p1 = prompt("Ingrese la nota del parcial 1");
-      p2 = prompt("Ingrese la nota del parcial 2")
-
-
-      edad[i] = parseInt(ed);
-      nombre[i] = nom;
-      materias[i] = parseInt(materias);
-      parcial1[i] = parseInt(p1);
-      parcial2[i] = parseInt(p2);
-   }
 }
 
 
@@ -132,8 +134,8 @@ function verEstadisticas() {
 
 
 
-ingresoDatos();
-verEstadisticas()
+// ingresoDatos();
+// verEstadisticas()
 
 
 //Ventas de cursos de la universidad 
@@ -156,21 +158,5 @@ class alumnos {
   
 }
 
-const cursos =[
-   {id:1,  producto: "JavaScript",precio:10000},
-   {id:2,  producto: "HTML",precio:20000},
-   {id:3,  producto: "CSS",precio:30000},
-   {id:4,  producto: "PHP",precio:40000},
-   {id:5,  producto: "Python",precio:50000},
-   {id:6,  producto: "C#",precio:90000},
-   {id:7,  producto: "C++",precio:70000},
-]
 
-const listaProductos = cursos.map(function(e){
-return `[${e.producto};${e.precio};${e.id}]`;
-})
 
-document.write(listaProductos)
-
-const cardCursos = document.getElementsByClassName("card") 
-cardCursos.innerHTML = `lista de productos: ${listaProductos}`;	
