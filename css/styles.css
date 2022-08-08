@@ -15,6 +15,7 @@ footer{
     padding: 2.5rem;
     
 }
+
 footer  a{
     color: white;
     text-decoration: none;
@@ -57,16 +58,39 @@ p{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 10px;
     margin: 10px;
+
 }
 .card{
-
+background-color: #0000;
     max-width: 300px;
     margin: auto;
     text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: arial;
 }
 
+.title{
+	color: #fff ;
+	margin: .5rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.card-text{
+	color: #fff  ;
+	font-size: 1.3rem;
+}	
 
+.card-body{
+	padding: 1rem;
+}
+.btn{
+	margin: .5rem;
+	
+}
+
+#lista-carrito{
+	background-color: #2C3333  ;
+}
 body#checkout-page #site-info {
 	position: static;
 }
@@ -204,3 +228,7 @@ body#checkout-page #site-info {
 
 
     
+
+
+
+
