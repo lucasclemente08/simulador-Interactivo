@@ -69,7 +69,7 @@ for (const curso of cursos) {
 
       agregarAlLocalStorage(carrito);
       mostrarEnTabla();
-
+    
 
    })
 
@@ -102,12 +102,18 @@ function mostrarEnTabla() {
    <td> 1</td>
    <td>${carrito[i].precio} $</td>
    
-   <td><img src="${carrito[i].images}" height="40px" alt="imagen"></td>
+   <td><img src="${carrito[i].images}" data-set="${carrito[i].id}" id="img-cartCheck"height="40px" alt="imagen"></td>
             `
          cartCheck.appendChild(container);
    
       };
-   
+      let imgCart= document.getElementById("img-cartCheck");
+      let dataId=imgCart.getAtrribute('data-set');
+      
+      const eliminarDuplicacion = dataId.find(item => item.id === carrito[i].id).remove();; 
+
+
+   valorFinal();
    
 
 
@@ -132,14 +138,16 @@ let sTotal = document.getElementById('sTotal');
 
 
 function valorFinal(){
+   sumaValor = 0;
+   
    for (i = 0; i < carrito.length; i++) {
-      valorTotal =document.createElement('span');
-      valorTotal.innerHTML = `
-      <span>Total: ${carrito[i].precio} $</span>
+      vT =document.createElement('span');
+      vT.innerHTML = `
+      <span>Total: ${sumaValor} $</span>
       `
-     
+      sumaValor+=carrito[i].precio;
    }
-subTotal.appendChild(valorTotal);
+subTotal.appendChild(vT);
 
    
 }
