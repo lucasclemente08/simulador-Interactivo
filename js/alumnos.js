@@ -129,7 +129,6 @@ mostrarLocalStorage();
 //        if (ed>=18) {
 //           mayor++;
 //           nomMayor=nom;
-       
 //        }
 //     }
  
