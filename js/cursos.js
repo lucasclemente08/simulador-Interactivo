@@ -131,18 +131,3 @@ function mostrarEnTabla() {
 let subTotal = document.getElementById("sub-total");
 let sTotal = document.getElementById('sTotal');
 
-// eliminarProducto();
-
-// btnDelete.addEventListener('click', (e) => {
-//     console.log(e.target);
-// })
-
-
-
-//FUNCION PARA OBTENER EL PRECIO TOTAL DEL CARRITO
-function totalCarrito(carrito){
-    console.log(carrito);
-    let total = 0;
-    carrito.forEach(p => total += p.subtotal());
-    return total;
-  }

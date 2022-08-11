@@ -15,24 +15,6 @@ class estudiante {
       console.log(`Parcial 1: ${this.parcial1}`);
       console.log(`Parcial 2: ${this.parcial2}`);
    }
-   promedioParcial() {
-      return (this.parcial1 + this.parcial2) / 2;
-   }
-  contarMaterias() {
-      return this.materias;
-   }
-   desaprobados() {
-      if (this.promedioParcial() < 6) {
-         return "desaprobado";
-      } else {
-         return "aprobado";
-      }
-   }
-   promocionados() {
-      if (this.promedioParcial() >= 7.5) {
-         return "promocionado";
-      } 
-   }
 }
 
 
