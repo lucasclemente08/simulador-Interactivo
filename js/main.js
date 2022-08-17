@@ -1,6 +1,6 @@
 // Objetos
 
-class estudiante {
+class Estudiante {
    constructor(nombre, edad, materias, parcial1, parcial2) {
       this.nombre = nombre.toUpperCase();
       this.edad = parseInt(edad);
@@ -38,3 +38,19 @@ class estudiante {
      })
    }, false)
  }())
+
+ //Fechas
+ var DateTime = luxon.DateTime;
+
+
+const now = DateTime.now().toLocaleString()
+
+ console.log(now);
+function fechas(){
+    let fecha = document.getElementById("fecha");
+    let dia=document.createElement("p");
+    dia.innerHTML =`Hoy es ${now} ✨​`;
+    
+    fecha.appendChild(dia)
+}
+fechas();

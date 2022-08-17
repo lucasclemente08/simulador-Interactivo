@@ -46,7 +46,13 @@ function ingresoDatos() {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Se agrego correctamente',
+        showConfirmButton: false,
+        timer: 1000
+      })                        
     const nombre = document
         .getElementById("nombre")
         .value;
@@ -119,6 +125,7 @@ form.addEventListener("submit", (e) => {
         let promedioParcial = (
             parseInt(parcial1) + parseInt(parcial2) + parseInt(materias)
         ) / 3;
+        
         let container = document.createElement("tr");
         container.innerHTML = `
     <td>${nombre}</td>
@@ -174,3 +181,5 @@ function verEstadisticas() {
        El numero de materias que cursa es: ${acumMaterias}
         `;
 }
+
+
