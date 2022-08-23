@@ -1,8 +1,8 @@
-let cContainer = document.getElementById("card-container");
-let cartCheck = document.getElementById("card-check");
-let btnDelete = document.getElementById("delete");
-let imgCart = document.getElementById("img-cartCheck");
-let btnVaciar = document.getElementById("empty-cart");
+const cContainer = document.getElementById("card-container");
+const cartCheck = document.getElementById("card-check");
+const price = document.getElementById("cart-price");
+const imgCart = document.getElementById("img-cartCheck");
+const btnVaciar = document.getElementById("empty-cart");
 const cursos = [
     {
         id: 1,
@@ -76,10 +76,9 @@ for (const curso of cursos) {
     })
 
 
-    const agregarAlCarrito = (id) => {
+ const agregarAlCarrito = (id) => {
         const item = cursos.find(producto => producto.id === id);
         carrito.push(item);
-
     }
 
 }
@@ -101,18 +100,24 @@ function mostrarEnTabla() {
       
    <td> ${carrito[i].producto}</td>
    <td>1</td>
-   <td>${carrito[i].precio} $</td>
+   <td id="cart-price">${carrito[i].precio} $</td>
    
    <td><img src="${carrito[i].images}" data-set="${carrito[i].id}"  id="img-cartCheck"height="40px" alt="imagen"></td>
    <td><a id="delete" class="btn btn-danger">X</a> </td>
  
    `
-
-        contador += carrito[i].precio;
-
-
+    
+ 
 
         cartCheck.appendChild(container);
+       
+
+
+        let precio = document.getElementById("cart-price").textContent;
+        console.log(precio);
+        
+        
+
 
         btnVaciar.addEventListener('click', () => {
             container.remove();
@@ -135,34 +140,48 @@ function mostrarEnTabla() {
                 }
               })
          });
+
+
+        
+        function deleteProduct() {
+            let btnDelete = document.getElementById("delete");
+        btnDelete.addEventListener('click', (e) => {
+         let buttonClicked=e.target
+         buttonClicked.parentElement.parentElement.remove();
+       eliminarProducto()
+           
+             })
+        
+       
+        }
+        deleteProduct();
+   
+         
+         
+
+
     };
 
-    
+   
 
 }
-let subTotal = document.getElementById("sub-total");
-let sTotal = document.getElementById('sTotal');
-
-// function calcularTotal() {
-
-// }
-// function eliminarProduto() {
-    
-//}
-
-//FECHAS Y 
-
-var DateTime = luxon.DateTime;
+const subTotal = document.getElementById("sub-total");
+const sTotal = document.getElementById('sTotal');
 
 
-const now = DateTime.now().toLocaleString()
 
- console.log(now);
-function fechas(){
-    let fecha = document.getElementById("fecha");
-    let dia=document.createElement("p");
-    dia.innerHTML =`Hoy es ${now} ✨​`;
-    
-    fecha.appendChild(dia)
-}
-fechas();
+function eliminarProducto() {
+
+    const carritoJson = JSON.parse(localStorage.getItem("carrito"));
+    const buscarProducto = carritoJson.findIndex( () =>  {
+       
+    });
+
+    // elimino el personaje por el indice
+    carrito.splice(buscarProducto, 1)
+
+
+};
+
+
+

@@ -48,9 +48,10 @@ const now = DateTime.now().toLocaleString()
  console.log(now);
 function fechas(){
     let fecha = document.getElementById("fecha");
-    let dia=document.createElement("p");
-    dia.innerHTML =`Hoy es ${now} ✨​`;
+    let dia=document.createElement("ul");
+    dia.innerHTML =`<p class="dia">Hoy es ${now} ✨</p>​`;
     
     fecha.appendChild(dia)
 }
 fechas();
+

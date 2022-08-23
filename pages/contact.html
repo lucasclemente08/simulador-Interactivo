@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Interactivo</title>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css"></head>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+<body>
+
+  
+    <header class="d-flex justify-content-center space-between py-3">
+      <ul class="nav nav-pills ">
+        <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="./alumnos.html" class="nav-link">Alumnos</a></li>
+        <li class="nav-item"><a href="./cursos.html" class="nav-link">Cursos</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+    
+      </ul>
+      <div id="fecha" class="fecha"> </div>
+    </header>
+
+ 
+     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">Nos puede contactar por email... 📨​</h1>
+            <p class="col-lg-10 fs-4"> Si quieres saber más acerca de los cursos  ofrecidos en la plataforma puedes ponerte en contacto con nosotros a través del siguiente formulario.<br><strong>Tenemos servicios de lunes a viernes 9 a 18 Hs. 😎​</strong></p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form id="form" class="form-contact">
+                <div class="field-contact">
+                  <label for="from_name">from name</label>
+                  <input type="text" name="from_name" id="from_name">
+                </div>
+                <div class="field-contact">
+                  <label for="to_name">to name</label>
+                  <input type="text" name="to_name" id="to_name">
+                </div>
+                <div class="field-contact">
+                  <label for="message">mensaje</label>
+                  <input type="text" name="message" id="message">
+                </div>
+                <div class="field-contact">
+                  <label for="email_id">email </label>
+                  <input type="text" name="email_id" id="email_id">
+                </div>
+                <div class="field-contact">
+                  <label for="reply_to">reply to</label>
+                  <input type="text" name="reply_to" id="reply_to">
+                </div>
+              
+                <input type="submit" id="button" value="Enviar" >
+              </form>
+          </div>
+        </div>
+      </div>
+
+
+
+   
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2022 - Simulador Interactivo</p>
+          </div>
+          <div class="col-md-6  links text-md-right">
+            <a href="#" class=" links">Acerca de</a>
+            <a href="#" class=" links">Contacto</a>
+            <a href="#" class=" links">Terminos y condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="../js/apis.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>    
+    <script type="text/javascript">
+  emailjs.init('Ners-DKxmfi-t09zm')
+    </script>
+
+    <script src="../librerias/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
