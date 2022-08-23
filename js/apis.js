@@ -41,7 +41,7 @@ document.getElementById('form')
 
 
 const lista= document.getElementById('lista');
-const nota=Math.round(Math.random()*10)
+
 
 const pedirUser = async() =>{
 const resp = await

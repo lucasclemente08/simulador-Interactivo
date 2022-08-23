@@ -185,3 +185,33 @@ function eliminarProducto() {
 
 
 
+function getCartItemPrices() {
+    // extract the price numbers from the cart items to calculate total
+    const prices = [];
+    // retrieve the td element in the cart where the product price is stored
+    // for each product in the cart
+    let nums = cartCheck.querySelectorAll("tr td:nth-child(3)");
+
+
+    // iterate over each td node and extract the price
+    // strip the $ sign from the text, turn the string into
+    // a number and push the number into the prices array
+    if (nums.length > 0) {
+      for (let i = 0; i < nums.length; i++) {
+        let num = nums[i].innerText;
+        num = num.replace(/[^\d]/g, "");
+        num = parseFloat(num);
+        prices.push(num);
+      }
+      // return the prices array
+    //   return prices ;
+    return     console.log(prices)
+    } else {
+      return;
+    }
+
+  }
+getCartItemPrices()
+
+
+

@@ -182,5 +182,3 @@ function verEstadisticas() {
         `;
 }
 
-let nota=Math.round(Math.random()*10)
-console.log(nota)
