@@ -1,5 +1,3 @@
-
-
 //Api de email
 
 const btnEmail = document.getElementById('button');
@@ -36,7 +34,7 @@ document.getElementById('form')
     });
 });
 
-// api 2
+// api JsonplaceHolder
 
 
 
