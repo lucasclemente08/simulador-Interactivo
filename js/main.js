@@ -45,7 +45,6 @@ class Estudiante {
 
 const now = DateTime.now().toLocaleString()
 
- console.log(now);
 function fechas(){
     let fecha = document.getElementById("fecha");
     let dia=document.createElement("ul");

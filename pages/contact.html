@@ -16,7 +16,18 @@
     <header class="d-flex justify-content-center space-between py-3">
       <ul class="nav nav-pills ">
         <li class="nav-item"><a href="../index.html" class="nav-link active" aria-current="page">Inicio</a></li>
-        <li class="nav-item"><a href="./alumnos.html" class="nav-link">Alumnos</a></li>
+        <div class="dropdown">
+          <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Alumnos
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li class="nav-item nav-alumnos"><a href="./alumnos.html" class="nav-link ">Estudiantes</a></li>
+            <li><a class="dropdown-item" href="./becas.html">Becas</a></li>
+
+          </ul>
+        </div>
+     
+
         <li class="nav-item"><a href="./cursos.html" class="nav-link">Cursos</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
     
